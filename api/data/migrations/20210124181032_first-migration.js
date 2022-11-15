@@ -64,7 +64,6 @@ exports.up = async (knex) => {
         .onDelete('RESTRICT')      
       reservations.integer('food_id')
         .unsigned()
-        .notNullable()
         .references('food_id')
         .inTable('foods')
         .onDelete('RESTRICT')
